@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button color="tertiary"  defaulHref ="">
+        <ion-icon name="return-down-back-outline"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title id="n" color="tertiary">Contatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+   <ion-list>
+     <ion-item id="rtrt" *ngFor="let todosDados of todosDados" routerLink="/detalhes-contatos/{{todosDados.id.value}}">
+      <ion-avatar slot="start" color="danger">
+        <img  src="https://cdn-icons-png.flaticon.com/128/1022/1022727.png" />
+      </ion-avatar>
+      <ion-label id="rtrt">{{todosDados.nome}}</ion-label>
+      <p id="rtrt"> {{todosDados.telefone}}</p>
+    </ion-item>  
+   </ion-list> 
+   
+  <ion-fab vertical="top" horizontal="end" slot="fixed" edge="true">
+    <ion-fab-button size="small" routerLink="/detalhes-contatos/add" color="tertiary">
+      <ion-icon  name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>   
+
+</ion-content>

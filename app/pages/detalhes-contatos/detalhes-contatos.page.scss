@@ -1,0 +1,88 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*
+#l{
+    font-size: 35px;
+    position: relative;
+    left: 49px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ion-content {
+    --background:  url('/../assets/uuu.png') no-repeat center center / cover !important;
+    
+
+  }
+
+  
+#ll{
+    padding: 45px;
+}
+
+#bb{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+#vvv{
+    padding-left: 65px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#pp{
+    padding-left: 12px;
+    padding-top: 5px;
+}
+
+#pppp{
+    bottom: 40px;
+    right: 12px;
+}
+
+#sal{
+    position: relative;
+    left: 99px;
+    top: 12px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+ion-select {
+    --placeholder-color: #6370FF;
+    --placeholder-opacity: 1;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  
+  ion-select::part(placeholder),
+  ion-select::part(text) {
+    flex: 0 0 auto;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  
+  ion-select::part(placeholder)::first-letter {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  
+  ion-select::part(text) {
+    color: #545ca7;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  
+  ion-select::part(icon) {
+    color: #4C8DFF;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+
+  }
