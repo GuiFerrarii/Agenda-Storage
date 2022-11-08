@@ -53,11 +53,14 @@ export class DetalhesContatosPage implements OnInit {
   }
 
   EncerrarEdicao(){
+
     const id : string = String(this.route.snapshot.paramMap.get('id'))
 
 
     if (id != 'add'){
       if (this.clienteForm.valid){
+
+        this.DadosContatos.AlterarContatoId(id, this.clienteForm.value)
       this.modoDeEdicao = false
      }
     }
@@ -109,7 +112,10 @@ export class DetalhesContatosPage implements OnInit {
     await alert.present();
   }
   deletarProduto(){
-    this.contatos.deletaDados(this.contatoSelecionado)
+    const id : string = String(this.route.snapshot.paramMap.get('id'))
+
+    this.DadosContatos.deletaDados(id)
+    // this.contatos.deletaDados(this.contatoSelecionado)
   }
 
  
