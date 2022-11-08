@@ -61,9 +61,19 @@ export class DadosContatosService {
 
 
 
-  deletaDados(enviarDadosId : any){
-    this.contatos.splice(this.contatos.indexOf(enviarDadosId), 1)
+  deletaDados(id : string){
+    // this.contatos.splice(this.contatos.indexOf(enviarDadosId), 1)
+    this.storage.remove(id)
   }
+
+  AlterarContatoId(id: string, enviarDadosId: Contato){
+    enviarDadosId.id = Guid.parse(id)
+    this.storage.set(enviarDadosId.id.toString(), JSON.stringify(enviarDadosId))
+
+  }
+
+
+
 
   async listarTodos(){
     let arrayPessoa: Contato [] = [];
@@ -74,4 +84,7 @@ export class DadosContatosService {
     return arrayPessoa;
    
   } 
+
+
+
 }
